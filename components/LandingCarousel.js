@@ -1,6 +1,7 @@
 "use client"
 import { useState } from "react"
 import { motion } from "framer-motion"
+import Image from "next/image"
 
 const slides = [
   { id: 1, image: "/images/exchange.jpg", text: "Exchange your old smartphone for a new one" },
@@ -25,11 +26,9 @@ export default function LandingCarousel() {
           transition={{ duration: 0.8 }}
         >
           {/* Background Image */}
-          <img
-            src={slide.image}
-            alt={slide.text}
-            className="w-full h-full object-cover"
-          />
+          <div className="relative w-full h-full">
+            <Image src={slide.image} alt={slide.text} fill className="object-cover" />
+          </div>
 
           {/* Text Overlay */}
           {index === current && (

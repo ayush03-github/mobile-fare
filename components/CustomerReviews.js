@@ -2,6 +2,7 @@
 
 import { useState, useEffect } from "react"
 import { motion, AnimatePresence } from "framer-motion"
+import Image from "next/image"
 
 const reviews = [
   {
@@ -125,7 +126,12 @@ function ReviewCard({ name, phone, review, image }) {
   return (
     <div className="rounded-xl overflow-hidden shadow-lg">
       <div className="relative aspect-[3/4]">
-        <img src={image} alt={name} className="w-full h-full object-cover" />
+        <Image 
+          src={image} 
+          alt={name} 
+          fill 
+          className="object-cover" 
+        />
         {/* Gradient Overlay */}
         <div className="absolute inset-0 flex items-end">
           <div className="w-full p-4 bg-gradient-to-t from-black/90 via-black/60 to-transparent pt-10">
