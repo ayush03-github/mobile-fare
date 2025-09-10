@@ -41,7 +41,7 @@ export default function CustomerReviews() {
 
   return (
     <section className="py-12 bg-gray-50">
-      <div className="container mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      <div className="container px-4 sm:px-6 lg:px-8 text-center">
         <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold mb-8">
           What Our Customers Say
         </h2>
@@ -93,13 +93,13 @@ export default function CustomerReviews() {
             </AnimatePresence>
 
             {/* Toggle Buttons */}
-            <div className="mt-6">
+            <div className="mt-6 flex justify-end">
               {!showAll ? (
                 <motion.button
                   whileTap={{ scale: 0.95 }}
                   whileHover={{ scale: 1.05 }}
                   onClick={() => setShowAll(true)}
-                  className="px-6 py-3 bg-gradient-to-r from-blue-900 to-blue-600 text-white font-bold rounded-full shadow-lg animate-bounce"
+                  className="px-6 py-3 bg-black text-white font-bold shadow-lg"
                 >
                   👀 See More Reviews
                 </motion.button>
@@ -108,7 +108,7 @@ export default function CustomerReviews() {
                   whileTap={{ scale: 0.95 }}
                   whileHover={{ scale: 1.05 }}
                   onClick={() => setShowAll(false)}
-                  className="px-6 py-3 bg-gradient-to-r from-blue-900 to-blue-600 text-white font-bold rounded-full shadow-lg"
+                  className="px-6 py-3 bg-black text-white font-bold rounded-full shadow-lg"
                 >
                   🔒 Hide Reviews
                 </motion.button>
