@@ -135,11 +135,11 @@ function ReviewCard({ name, phone, review, image }) {
         {/* Gradient Overlay */}
         <div className="absolute inset-0 flex items-end">
           <div className="w-full p-4 bg-gradient-to-t from-black/90 via-black/60 to-transparent pt-10">
-            <p className="text-white text-sm sm:text-base italic">"{review}"</p>
+            <p className="text-white text-sm sm:text-base italic">&quot;{review}&quot;</p>
             <p className="mt-2 text-yellow-300 text-sm sm:text-base font-semibold">
               {phone}
             </p>
-            <p className="mt-1 text-gray-200 text-xs sm:text-sm font-bold">— {name}</p>
+            <p className="mt-1 text-gray-200 text-xs sm:text-sm font-bold"> {name}</p>
           </div>
         </div>
       </div>
